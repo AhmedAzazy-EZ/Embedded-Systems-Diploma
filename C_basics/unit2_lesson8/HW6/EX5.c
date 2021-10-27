@@ -38,7 +38,7 @@ int main()
     employee_t employees[10];
     employee_t * P_emp[10];
     //initializing the arrays
-    for( i = 0 ; i < 10 ;i++)
+    for( i = 0 ; i < len ;i++)
     {
         P_emp[i] = &employees[i];
         strcpy(P_emp[i]->name , "UNKNOWN");
