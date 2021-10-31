@@ -3,7 +3,7 @@ arm-none-eabi-gcc.exe -E ./main.c -o ./main.i
 arm-none-eabi-gcc.exe -E ./uart.c -o ./uart.i
 
 #define Compiler and Assembler flags
-GCC_Flags="-mcpu=arm926ej-s -c -I. -g -nostdlib"
+GCC_Flags="-mcpu=arm926ej-s -c -I. -nostdlib"
 ASM_Flags="-mcpu=arm926ej-s -M"
 
 #create object files
