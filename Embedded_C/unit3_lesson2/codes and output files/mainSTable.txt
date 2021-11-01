@@ -1,4 +1,0 @@
-00000000 T main
-00000000 D str
-00000000 R str2
-         U Uart_Send_Str
