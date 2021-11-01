@@ -12,7 +12,6 @@ arm-none-eabi-gcc.exe $GCC_Flags ./main.c -o main.o
 arm-none-eabi-gcc.exe $GCC_Flags ./uart.c -o uart.o
 
 
-
 #create objdump files
 arm-none-eabi-objdump.exe -h ./startup.o > ./start.txt
 arm-none-eabi-objdump.exe -h ./main.o > ./main.txt
