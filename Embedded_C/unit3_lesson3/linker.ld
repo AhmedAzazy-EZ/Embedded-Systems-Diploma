@@ -1,10 +1,3 @@
-/*
- *	linker.ld
- *
- *  Created on: Oct 3, 2021
- *      Author: Ahmed Azazy
- */
-
 MEMORY
 {
 	FLASH (rx) : ORIGIN = 0x08000000 , LENGTH = 128K 

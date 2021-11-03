@@ -1,10 +1,3 @@
-/*
- *	startup.c
- *
- *  Created on: Oct 3, 2021
- *      Author: Ahmed Azazy
- */
-
 #include <stdint.h>
 
 extern uint32_t _stack_top;
@@ -53,11 +46,10 @@ void Reset_Handler(void )
 	{
 		*pdes++ = (unsigned char)0;
 	}
-	
 	main();
 	
 }
-   
+
 void Default_Handler(void)
 {
 	Reset_Handler();
