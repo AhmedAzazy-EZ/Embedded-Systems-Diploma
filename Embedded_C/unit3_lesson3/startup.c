@@ -1,3 +1,10 @@
+/*
+ *	startup.c
+ *
+ *  Created on: Oct 3, 2021
+ *      Author: Ahmed Azazy
+ */
+
 #include <stdint.h>
 
 extern uint32_t _stack_top;

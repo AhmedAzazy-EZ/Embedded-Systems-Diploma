@@ -1,3 +1,10 @@
+/*
+ *	main.c
+ *
+ *  Created on: Oct 3, 2021
+ *      Author: Ahmed Azazy
+ */
+ 
 #include <stdint.h>
 
 #define RCC_BASE	(0x40021000)
@@ -6,8 +13,22 @@
 
 #define GPIOA_BASE	(0x40010800)
 #define GPIOA_CRH	*((volatile uint32_t *)((uint32_t *)(GPIOA_BASE + 0x04)))
-#define GPIOA_ODR	*((volatile uint32_t *)((uint32_t *)(GPIOA_BASE + 0x0C)))
+//#define GPIOA_ODR	*((volatile uint32_t *)((uint32_t *)(GPIOA_BASE + 0x0C)))
 
+typedef union U_ODR
+{
+	volatile uint32_t all_fields;
+	
+	struct pin
+	{
+		volatile uint32_t reserved : 13 ;
+		volatile uint32_t p13 : 1 ;
+	}pins;
+}ODR_t;
+
+#define GPIOA_ODR  ((volatile ODR_t *)(GPIOA_BASE + 0x0C))
+
+char arr[100] = "Learn-in-depth: Ahmed Azazy";
 
 int main(void )
 {
@@ -19,8 +40,9 @@ int main(void )
 	
 	while(1)
 	{
-		GPIOA_ODR ^= (1<<13);
-		*((volatile uint32_t *)(0x20000000)) ^=1;
+		GPIOA_ODR->pins.p13 = 1;
+		for(i = 0 ; i < 20000 ; i++){}
+		GPIOA_ODR->pins.p13 = 0;
 		for(i = 0 ; i < 20000 ; i++){}
 	}
 	
