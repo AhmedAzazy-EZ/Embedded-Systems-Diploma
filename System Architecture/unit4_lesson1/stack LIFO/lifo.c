@@ -9,6 +9,9 @@
 
 void LIFO_Init(LIFO_t * P_lifo , element_t * base , unsigned int length)
 {
+	if(P_lifo == NULL)
+		return  ;
+	
 	P_lifo->base = base;
 	P_lifo->head = base;
 	P_lifo->count = 0;
