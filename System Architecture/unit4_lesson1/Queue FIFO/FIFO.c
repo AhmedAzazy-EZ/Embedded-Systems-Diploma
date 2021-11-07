@@ -53,7 +53,7 @@ FIFO_status FIFO_ReadItem(FIFO_t * P_fifo , element_t * item)
 
 	*item = *P_fifo->tail++;
 	P_fifo->count--;
-	//reset the head pointer
+	//reset the tail pointer
 	if(P_fifo->tail >= (P_fifo->base + P_fifo->length))
 		P_fifo->tail = P_fifo->base;
 
