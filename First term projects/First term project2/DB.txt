@@ -1,0 +1,5 @@
+1  Mostafa  Khaled  3.4  20  21  22  23  24
+2  Karim  Sayed  3.98  1  2  3  4  5
+3  Ahmed  Azazy  4  26  25  24  23  15
+4  Mona  Ismail  3.2  18  17  20  23  24
+1  Mohamed  Omar  3.8  15  23  16  17  18
